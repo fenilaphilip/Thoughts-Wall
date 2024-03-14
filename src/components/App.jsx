@@ -16,7 +16,7 @@ function App() {
 
     return (
         <div className={styles.body}>
-            <Header postingWindow={hideAndShow} />
+            <Header createPost={hideAndShow} />
             <main>
                 <PostList showPostingWindow={viewPostingWindow} hidePostingWindow={hideAndShow} />
             </main>

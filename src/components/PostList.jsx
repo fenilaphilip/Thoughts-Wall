@@ -14,7 +14,7 @@ function PostList({ showPostingWindow, hidePostingWindow }) {
         <>
             {showPostingWindow ?
                 <Modal view={hidePostingWindow}>
-                    <NewPost content={content} setContent={setContent} />
+                    <NewPost content={content} setContent={setContent} discardPost={hidePostingWindow} />
                 </Modal>
                 : null}
 

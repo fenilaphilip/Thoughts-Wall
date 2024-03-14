@@ -2,7 +2,7 @@ import { MdDataThresholding, MdStickyNote2 } from 'react-icons/md';
 
 import styles from "./Header.module.css"
 
-function Header({ postingWindow }) {
+function Header({ createPost }) {
 
     return (
         <header className={styles.header}>
@@ -12,7 +12,7 @@ function Header({ postingWindow }) {
             </h1>
             <button
                 className={styles.newpost}
-                onClick={postingWindow}>
+                onClick={createPost}>
                 <MdStickyNote2 size={20} />
                 New Thought
             </button>

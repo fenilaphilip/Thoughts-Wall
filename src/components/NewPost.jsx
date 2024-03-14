@@ -1,7 +1,7 @@
 
 import styles from "./NewPost.module.css";
 
-function NewPost({ content, setContent, hide }) {
+function NewPost({ content, setContent, discardPost }) {
 
     function handleOnChange(event) {
         event.preventDefault();
@@ -43,7 +43,11 @@ function NewPost({ content, setContent, hide }) {
                     value={content.caption}
                     required />
             </p>
-            <button className={styles.action}>Post</button>
+            <p className={styles.actions}>
+                <button type="button" onClick={discardPost}>Discard</button>
+                <button type="submit">Post</button>
+            </p>
+
         </form>
     );
 }
