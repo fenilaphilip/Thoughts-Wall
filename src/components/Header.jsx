@@ -1,11 +1,21 @@
+import { MdDataThresholding, MdStickyNote2 } from 'react-icons/md';
+
 import styles from "./Header.module.css"
 
+function Header({ postingWindow }) {
 
-function Header() {
     return (
         <header className={styles.header}>
-            <h1 className={styles.name}>Thoughts Wall</h1>
-            <button className={styles.newpost}>New Thought</button>
+            <h1 className={styles.name}>
+                <MdDataThresholding size={50} />
+                Thoughts Wall
+            </h1>
+            <button
+                className={styles.newpost}
+                onClick={postingWindow}>
+                <MdStickyNote2 size={20} />
+                New Thought
+            </button>
         </header>
     );
 }

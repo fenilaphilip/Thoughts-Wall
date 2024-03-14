@@ -1,9 +1,10 @@
 import { useState } from "react";
 import NewPost from "./NewPost";
 import Post from "./Post";
+import Modal from "./Modal.jsx";
 import notes from '../notes.js';
 
-function PostList() {
+function PostList({ showPostingWindow, hidePostingWindow }) {
     const [content, setContent] = useState({
         body: "",
         caption: ""
@@ -11,7 +12,12 @@ function PostList() {
 
     return (
         <>
-            <NewPost content={content} setContent={setContent} />
+            {showPostingWindow ?
+                <Modal view={hidePostingWindow}>
+                    <NewPost content={content} setContent={setContent} />
+                </Modal>
+                : null}
+
             <Post title={content.caption} body={content.body} />
             {notes.map((note) => {
                 return (

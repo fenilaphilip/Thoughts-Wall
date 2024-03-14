@@ -1,7 +1,7 @@
 
 import styles from "./NewPost.module.css";
 
-function NewPost({ content, setContent }) {
+function NewPost({ content, setContent, hide }) {
 
     function handleOnChange(event) {
         event.preventDefault();
@@ -19,7 +19,7 @@ function NewPost({ content, setContent }) {
             }
         });
 
-        console.log(content)
+        // console.log(content);
     }
 
 
