@@ -1,0 +1,10 @@
+html {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #8ec4ee;
+    margin: 2rem 10%;
+    padding: 1rem;
+    text-align: center;
+}

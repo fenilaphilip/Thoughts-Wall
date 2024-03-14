@@ -1,12 +1,40 @@
 header {
-    background-color: #2b279f;
-    margin: auto -16px;
-    padding: 16px 32px;
+    background-color: #050588;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ece1fa;
 }
 
 .name {
     color: #fff;
     font-family: "McLaren", cursive;
     font-weight: 200;
+    font-size: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+}
+
+.newpost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #d4d0df;
+    color: #2a2630;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(9, 9, 9, 0.2);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.newpost:hover {
+    background-color: #3078c1;
+    color: whitesmoke;
 }
