@@ -1,7 +1,11 @@
-
+import { useState } from "react";
 import styles from "./NewPost.module.css";
 
-function NewPost({ content, setContent, discardPost }) {
+function NewPost({ discardPost, savePost }) {
+    const [content, setContent] = useState({
+        body: "",
+        caption: ""
+    });
 
     function handleOnChange(event) {
         event.preventDefault();
@@ -19,7 +23,13 @@ function NewPost({ content, setContent, discardPost }) {
             }
         });
 
-        // console.log(content);
+        console.log(content);
+    }
+
+    function handleSaveButton(event) {
+        event.preventDefault();
+        savePost(content);
+        discardPost();
     }
 
 
@@ -45,7 +55,7 @@ function NewPost({ content, setContent, discardPost }) {
             </p>
             <p className={styles.actions}>
                 <button type="button" onClick={discardPost}>Discard</button>
-                <button type="submit">Post</button>
+                <button type="submit" onClick={handleSaveButton}>Post</button>
             </p>
 
         </form>
